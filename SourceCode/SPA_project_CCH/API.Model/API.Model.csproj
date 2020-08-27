@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D5CBD3C-A2A2-4F18-A8BB-82FE4BD41F9D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>API.Model</RootNamespace>
+    <AssemblyName>API.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\BlackList.cs" />
+    <Compile Include="Enum\BodyMeasurement.cs" />
+    <Compile Include="Enum\BookingHistoryStatus.cs" />
+    <Compile Include="Enum\Color.cs" />
+    <Compile Include="Enum\CustomerType.cs" />
+    <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enum\MeasurementStatus.cs" />
+    <Compile Include="Enum\OrderBy.cs" />
+    <Compile Include="Enum\Position.cs" />
+    <Compile Include="Enum\Price.cs" />
+    <Compile Include="Enum\Profression.cs" />
+    <Compile Include="Enum\Star.cs" />
+    <Compile Include="HangdingCodeModel\ErrorReponseModel.cs" />
+    <Compile Include="HangdingCodeModel\MessageDataModel.cs" />
+    <Compile Include="HangdingCodeModel\PagingInfo.cs" />
+    <Compile Include="HangdingCodeModel\ReponseModel.cs" />
+    <Compile Include="HangdingCodeModel\ResultReponseModel.cs" />
+    <Compile Include="HangdingCodeModel\ServiceResult.cs" />
+    <Compile Include="Model\5FilterServiceList.cs" />
+    <Compile Include="Model\AppointmentDetailDto.cs" />
+    <Compile Include="Model\AppointmentNote.cs" />
+    <Compile Include="Model\BedAndTherapistNum.cs" />
+    <Compile Include="Model\BodyMeasurementCustomerDTO.cs" />
+    <Compile Include="Model\BookingCustomerSignature.cs" />
+    <Compile Include="Model\BookingDetailDto.cs" />
+    <Compile Include="Model\BookingPhotoDTO.cs" />
+    <Compile Include="Model\Booking_history_of_customersDto.cs" />
+    <Compile Include="Model\BookingDTO.cs" />
+    <Compile Include="Model\BufferTimeDetail.cs" />
+    <Compile Include="Model\CreateBookingDto.cs" />
+    <Compile Include="Model\CreateBookingNoteDto.cs" />
+    <Compile Include="Model\CreateCustomerFeedbackDto.cs" />
+    <Compile Include="Model\CreateReviewOutletDto.cs" />
+    <Compile Include="Model\CreateReviewServiceDto.cs" />
+    <Compile Include="Model\CustomerListDTO.cs" />
+    <Compile Include="Model\CustomerProfileDetail.cs" />
+    <Compile Include="Model\CustomerRegiter.cs" />
+    <Compile Include="Model\CustomerSignDTO.cs" />
+    <Compile Include="Model\CustomerUpComming.cs" />
+    <Compile Include="Model\EditBookingDto.cs" />
+    <Compile Include="Model\EditBookingNoteDto.cs" />
+    <Compile Include="Model\ManageBedDto.cs" />
+    <Compile Include="Model\MeasurementCustomerDto.cs" />
+    <Compile Include="Model\MeasurementDto.cs" />
+    <Compile Include="Model\MsgTwilio.cs" />
+    <Compile Include="Model\OutletDetailCA.cs" />
+    <Compile Include="Model\ReviewOutletDto.cs" />
+    <Compile Include="Model\ReviewServiceDto.cs" />
+    <Compile Include="Model\ServiceDetail.cs" />
+    <Compile Include="Model\ServiceListDTO.cs" />
+    <Compile Include="Model\ServicesIdNameDto.cs" />
+    <Compile Include="Model\ServiceTypeDto.cs" />
+    <Compile Include="Model\TherapistBookingDto.cs" />
+    <Compile Include="Model\TherapistListDTO.cs" />
+    <Compile Include="Model\TherapistProfile.cs" />
+    <Compile Include="Model\TimeSlotDTO.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="Model\BedServiceDto.cs" />
+    <Compile Include="Model\CustormerDetail.cs" />
+    <Compile Include="Model\LogicResult.cs" />
+    <Compile Include="Model\OutletDetail.cs" />
+    <Compile Include="Model\RoomDetail.cs" />
+    <Compile Include="Model\TherapistDetail.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPA.Domain\SPA.Domain.csproj">
+      <Project>{1D8252FC-DDC2-4410-8EC3-1ED76206CFFE}</Project>
+      <Name>SPA.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
